@@ -22,18 +22,15 @@ function User() {
   return (
     <>
       <div className="container py-4">
-        <Link className="btn btn-secondary" to="/">
-          Back To Home
-        </Link>
         <h1 className="display-4">User Id : {id}</h1>
         <hr></hr>
         <u1 className="list-group w-50">
           <l1 className="list-group-item">
-            <strong>Name:</strong>{" "}
+            <strong>User name:</strong>{" "}
             <b style={{ color: "Tomato" }}>{user.name}</b>
           </l1>
           <l1 className="list-group-item">
-            <strong>User name:</strong>{" "}
+            <strong>Password:</strong>{" "}
             <b style={{ color: "Tomato" }}>{user.username}</b>
           </l1>
           <l1 className="list-group-item">
@@ -45,11 +42,15 @@ function User() {
             <b style={{ color: "Tomato" }}> {user.phone}</b>
           </l1>
           <l1 className="list-group-item">
-            <strong>Favourite Website:</strong>{" "}
+            <strong>Favourite Sport:</strong>{" "}
             <b style={{ color: "Tomato" }}>{user.website}</b>
           </l1>
         </u1>
+        <Link className="btn btn-danger mt-2" to="/">
+          Back To Home
+        </Link>
       </div>
+
     </>
   );
 }

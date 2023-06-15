@@ -21,9 +21,11 @@ function Adduser() {
 
     navigate("/");
   };
-
+  const navigate2 = useNavigate();
+  const home = () => {
+    navigate2("/");
+  };
   return (
-    
     <>
       <>
         <div className="container">
@@ -39,7 +41,7 @@ function Adduser() {
                   type="tect"
                   className="form-control form-control-lg"
                   name="name"
-                  placeholder="Enter Your Name"
+                  placeholder="Enter Your Username"
                   value={name}
                   onChange={(e) => oninputchange(e)}
                 ></input>
@@ -49,7 +51,7 @@ function Adduser() {
                   type="text"
                   className="form-control form-control-lg"
                   name="username"
-                  placeholder="Enter Your Username"
+                  placeholder="Enter Your Password"
                   value={username}
                   onChange={(e) => oninputchange(e)}
                 ></input>
@@ -79,12 +81,19 @@ function Adduser() {
                   type="text"
                   className="form-control form-control-lg"
                   name="website"
-                  placeholder="Enter Your Favourite Website Name"
+                  placeholder="Enter Your Favourite Sport"
                   value={website}
                   onChange={(e) => oninputchange(e)}
                 ></input>
               </div>
-              <button className="btn btn-primary btn-block">Add Me</button>
+              <span>
+                <button className="btn btn-primary btn-block mt-2">
+                  Add Me
+                </button>
+                <button className="btn btn-danger ms-2 mt-2 " onClick={home}>
+                  Back To Home
+                </button>
+              </span>
             </form>
           </div>
         </div>
